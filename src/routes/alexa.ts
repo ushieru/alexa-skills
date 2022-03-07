@@ -1,6 +1,5 @@
 import express from 'express';
 import { ExpressAdapter } from 'ask-sdk-express-adapter';
-
 import { createSkill } from './../skills/SkillHandler';
 
 const alexaApp = express();
@@ -11,4 +10,4 @@ const adapter = new ExpressAdapter(skill, false, false);
 
 alexaApp.post('/', adapter.getRequestHandlers());
 
-module.exports = alexaApp;
+export default alexaApp
